@@ -1,0 +1,48 @@
+<strong
+                    >জাভাস্ক্রিপ্ট কি ভাবে কাজ করে নিছে বিস্তারিত দেওয়া
+                    হলো</strong
+                  >
+                  <p>
+                    জাভাস্ক্রিপ্ট singal threaded language. এটি একসাথে একাধিক
+                    কাজ করতে পারেনা। একটা একটা লাইন বাই লাইন interpret করে
+                    কোডকে। তাই এাটাকে singal threaded language বলে।
+                  </p>
+                  <p>
+                    এটাকে জাভাস্ক্রিপ্ট এ synchronous blocking behavior বলে।
+                  </p>
+                  <p>
+                    এই ভাবে যদি কোড রা হয় তাহলে অনেক সম্যস্যার সম্মুখিন হতে হবে।
+                    যদি কোন একটা ফংশন রান হওয়ার জন্য সময় নেই। ওই টার জন্য fyll
+                    code রান হবেনা যখন ফংশন রান টাইম শেষ হবে তখন বাকি গুলো রান।
+                    এই রকম ব্লকিং behavior থেকে বাছতে asynchronous way তে কিছু
+                    code run করাতে। এটা multiple কাজ করতে পারে
+                  </p>
+                  <p>
+                    ব্রাউজারে JS কোড রান হওয়ার নিয়ম। প্রথমে কো ড গুলো মে শিন
+                    ল্যানগয়েজ এ convert হয় কিছু ইন্জিন এর সাহায্যে। যেমনঃ chrome
+                    browser ইউজ করে v8 engine. Firefox ইউজ করে spider monkey
+                    etc: Js এর কোড গোলো কে optimize করার জন্য jit (just in time
+                    compiler ) use করে
+                  </p>
+
+
+                  //2
+                  <strong
+                    >localStorage আর sessionStorage এর মধ্যে পার্থক্য নিছে তুলে
+                    ধরা হলো
+                  </strong>
+                  <p>
+                    ১/ localStorage এর কোন experdate নাই যতক্ষণ ডিলিট করে নাই।
+                    আর sessionStorage ওয় ট্যাব যতক্ষণ ব্রাউজার এ open থাকবে
+                    ততক্ষণ থাকবে
+                  </p>
+                  <p>
+                    ২/ localStorage এর ক্যাপাসিটি ১০ এমবি। আর sessionStorage ar
+                    ক্যাপাসিটি ৫ ‍এমবি।
+                  </p>
+                  <p>
+                    ৩/ localStorage সব ট্যাব এর জন্য কাজ করে নির্দিষ্ট ট্যাব এর
+                    জন্য কাজ না করে। আর sessionStorage নির্দিষ্ট কোন একটা ট্যাব
+                    এর জন্য কাজ করে। সব ট্যাব এর জন্য করেনা ট্যাব close
+                    sessionStorage colose
+                  </p>
