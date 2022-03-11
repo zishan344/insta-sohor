@@ -116,6 +116,7 @@
                     জাভাস্ক্রিপ্ট কি ভাবে কাজ করে নিছে বিস্তারিত দেওয়া
                     হলো</strong
                   >
+                 <div style="font-size:12px;font-weight:bold">
                   <p>
                     জাভাস্ক্রিপ্ট singal threaded language. এটি একসাথে একাধিক
                     কাজ করতে পারেনা। একটা একটা লাইন বাই লাইন interpret করে
@@ -125,19 +126,23 @@
                     এটাকে জাভাস্ক্রিপ্ট এ synchronous blocking behavior বলে।
                   </p>
                   <p>
-                    এই ভাবে যদি কোড রা হয় তাহলে অনেক সম্যস্যার সম্মুখিন হতে হবে।
-                    যদি কোন একটা ফংশন রান হওয়ার জন্য সময় নেই। ওই টার জন্য fyll
-                    code রান হবেনা যখন ফংশন রান টাইম শেষ হবে তখন বাকি গুলো রান।
+                    এই ভাবে যদি কোড রান হয় তাহলে অনেক সম্যস্যার সম্মুখিন হতে হবে।
+                    যদি কোন একটা ফংশন রান হওয়ার জন্য সময় নেই। ওই টার জন্য full
+                    code রান হবেনা যখন ফংশন রান টাইম শেষ হবে তখন বাকি গুলো রান হবে।।
                     এই রকম ব্লকিং behavior থেকে বাছতে asynchronous way তে কিছু
                     code run করাতে। এটা multiple কাজ করতে পারে
                   </p>
                   <p>
-                    ব্রাউজারে JS কোড রান হওয়ার নিয়ম। প্রথমে কো ড গুলো মে শিন
-                    ল্যানগয়েজ এ convert হয় কিছু ইন্জিন এর সাহায্যে। যেমনঃ chrome
+                    ব্রাউজারে JS কোড রান হওয়ার নিয়ম। প্রথমে কোড গুলো মেশিন
+                    ল্যানগুয়েজ এ convert হয় কিছু ইন্জিন এর সাহায্যে। যেমনঃ chrome
                     browser ইউজ করে v8 engine. Firefox ইউজ করে spider monkey
-                    etc: Js এর কোড গোলো কে optimize করার জন্য jit (just in time
-                    compiler ) use করে
+                    etc: Js এর কোড গুলো কে optimize করার জন্য jit (just in time
+                    compiler ) use করে।  
+                    <p>
+                      ইন্জিনে এর ভিতরে call stack নামে একটা জিনিস থাকে। যে কোন js file run করতে গুলো প্রথমে একটা main function call হয় তারপর কোড গুলোকে একটা একটা করে call stack এ নিয়ে প্রিন্ট হয়। আর যদি asynchronous হয় তাহলে web api কে  handover করে দিবে। সব কোড রান শেষ হলে web api call back Queue তে দিবে আর callback Queue event loop এর মাধ্যমে comperar করে call stack এ কিছু আছে কি না। যদি না থাকে call stack এ পাঠিয়ে দিবে। তারপর asynchronous code গুলো প্রিন্ট হবে।
+                    </p>
                   </p>
+                 </div>
                 </div>
               </div>
             </div>
